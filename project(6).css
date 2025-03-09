@@ -1,0 +1,279 @@
+body {
+  background-color: black;
+  overflow:auto;
+  width:100%;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.start{
+  width: 100vw;
+  height: 100vh;
+  background-image: url('logo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center center;
+
+}
+.startHide{
+  display:none;
+}
+.start button{
+  width:150px;
+  height:40px;
+  background-color: blue;
+  color:red;
+  font-size:16px;
+  font-weight:bolder;
+  box-shadow: 0px 0px 10px #00FFFF;
+  border:none;
+  border-radius: 10px;
+  position:absolute;
+  bottom:40px;
+  left:105px;
+}
+.game {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('space.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.gameHide{
+  display:none;
+}
+#spaceshipArea {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  width: 100vw;
+  height: 60px;
+overflow:hidden;
+
+}
+#spaceshipArea::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ff4d4d;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+#spaceshipArea.damaged::before {
+  opacity: 0.8; /* Set the opacity of the red overlay */
+}
+#spaceshipArea img {
+  position: absolute;
+  left: 125px;
+
+}
+
+.bullet {
+  position: absolute;
+  width: 15px;
+  z-index: 10;
+  height: 40px;
+  transition: all 4s ease;
+  animation: bullet-movement 4s ease;
+}/*
+.triBullet0{
+  transform:rotate(15deg);
+}
+.triBullet1{
+  transform:rotate(-15deg);
+}*/
+.alien {
+  width: 40px;
+  z-index:100;
+  position: absolute;
+  top: -10px;
+  transition:all 0.3s ease;
+}
+.tribulleticon{
+  width:50px;
+  z-index:100;
+  position:absolute;
+  top:-10px;
+  transition:all 0.3s ease;
+  animation: alien-movement 4s ease;
+}
+.giantAlien{
+  width: 70px;
+  z-index: 100;
+  position: absolute;
+  top: -10px;
+  filter: hue-rotate(60deg) saturate(1.7) brightness(1.4); 
+}
+.alien-animation {
+  animation: alien-movement 4s ease; /* Original animation */
+}
+.alien-animation.stopped {
+  animation-play-state: paused; /* Pause the animation */
+}
+.scoreCard{
+  position:absolute;
+  top:10px;
+  right:10px;
+  min-width:80px;
+  max-width:110px;
+  background-color: #00AAFF; 
+  color:#000000;
+  border: 2px solid #00FFFF;
+  box-shadow: 0px 0px 10px #00FFFF;
+  padding: 5px 5px; 
+  box-sizing:border-box;
+  border-radius: 5px; 
+  font-weight: bold; 
+  text-decoration: none; 
+  display: inline-block;
+  transition: all 0.3s ease; 
+  font-size:13px;
+}
+#score p{
+  display:inline;
+}
+.scoreCard:hover {
+  text-shadow: 0px 0px 5px #00FFFF; 
+  background-color: #00AAFF; 
+  filter: brightness(1.1); 
+  border: 2px solid #00AAFF;
+}
+#hp{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  position:absolute;
+  top:10px;
+  left:0px;
+ width:240px;
+
+}
+#hp #char{
+  width:35px;
+  height:35px;
+  border-radius:20px;
+  background-color:blue;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+  z-index: 10;
+  
+}
+#char img{
+  width:50px;
+}
+#hp #hpbar{
+  width:150px;
+  height:18px;
+  background-color:red;
+  border:3px solid black;
+  border-radius:13px;
+  position:relative;
+  left:-4px;
+}
+#hpbar #hpSlider{
+  width:150px;
+  border-radius:13px;
+  height:18px;
+  background-color:green;
+  
+  position: absolute;
+  top: 0;
+  left: 0px;
+  z-index: 8;
+  transition:all 0.4s ease-out;
+  }
+
+#gameover{
+  font-size:48px;
+  font-weight:bold;
+  transform:translate(-50%,-50%);
+  position:absolute;
+  top:50%;
+left:50%;
+  /*
+  left:40px;
+  top:220px;*/
+  color: #ff4444; /* A bright red to indicate the end of the game */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* A subtle shadow to make the text pop */
+    font-family: 'Orbitron', sans-serif; /* A futuristic font to match the space theme */
+    letter-spacing: 2px; /* Adds a bit of spacing between the letters for a dramatic effect */
+    text-transform: uppercase; /* Ensures the text is all uppercase */
+    z-index: 100; /* Ensures it stays on top of other elements */
+    background: rgba(0, 0, 0, 0.8); /* A semi-transparent background to make the text stand out */
+    padding: 20px 40px; /* Some padding to make the text feel more substantial */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    animation: pulse 2s infinite; /* A subtle pulsing animation to draw attention */
+  
+}
+#restart{
+  width:150px;
+  height:40px;
+  background-color: rgba(0, 0, 0, 0.8); 
+  color:#ff4444;
+    font-weight:bold;
+    transform:translate(-50%,-50%);
+    position:absolute;
+    top:70%;
+  left:45%;
+  margin:10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* A subtle shadow to make the text pop */
+  font-family: 'Orbitron', sans-serif; /* A futuristic font to match the space theme */
+  letter-spacing: 2px; /* Adds a bit of spacing between the letters for a dramatic effect */
+  text-transform: uppercase; /* Ensures the text is all uppercase */
+  z-index: 100;
+  border-radius: 10px;
+  border:none;
+}
+.hiscore{
+  position:absolute;
+  bottom:2px;
+  left:95px;
+  z-index: 100;
+  width:170px;
+  font-size:14px;
+  color:white;
+  text-align:center;
+
+}
+.hp{
+  width:60px;
+  position:absolute;
+  top:0px;
+transition:all 0.3s ease;
+  animation:alien-movement 4s ease;
+}
+@keyframes bullet-movement {
+
+  to {
+    top: -4vh;
+  }
+}
+
+@keyframes alien-movement {
+  
+  to {
+    top: 98vh;
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
