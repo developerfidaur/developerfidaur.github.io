@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #1a1a1a;
+
+}
+
+header img {
+  filter: invert(1);
+}
+
+header {
+  background-color: black;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 8px;
+  height: 50px;
+  z-index: 10;
+}
+
+header .search {
+  width: 17px;
+  position: absolute;
+  top: 12px;
+  left: 170px;
+}
+
+header button {
+  border: none;
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  width: 95px;
+  height: 32px;
+  font-weight: bolder;
+  position: absolute;
+  left: 200px;
+  top: 8px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  transition:filter 0.5s;
+}
+
+
+header .hamburger {
+  width: 25px;
+  position: absolute;
+  top: 15px;
+  left: 320px;
+}
+
+header .logo {
+  position: absolute;
+  left: 10px;
+}
+
+.mobilemenu {
+  background-color: black;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  position: fixed;
+  top: 0px;
+  z-index: 2;
+  animation:slide-left 0.5s ease-in-out;
+}
+
+.none {
+  display: none;
+}
+
+.mobilemenu img {
+  position: absolute;
+  top: 20px;
+  left: 320px;
+}
+
+.mobilemenu .h4s {
+  position: absolute;
+  top: 230px;
+  left: 50px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 21px;
+  width:100vw;
+}
+.mobilemenu h4:hover{
+  background-color:#3b3b3b;
+}
+.mobilemenu #line {
+  background-color: white;
+  width: 17px;
+  height: 2px;
+  z-index: 3;
+  position: absolute;
+  top: 185px;
+  left: 50px;
+}
+
+.mobilemenu .h2s {
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  font-weight: bolder;
+}
+
+.albumscollection {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  transform: translateY(32px);
+}
+
+.albumscollection img {
+  width: 165px;
+  border-radius: 6px;
+}
+
+
+/*.albums{
+  display:flex;
+  flex-direction:row;
+  column-gap:10px;
+  overflow-x:auto;
+  margin-top:12px;
+}*/
+.albums {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 20px;
+  overflow-x: auto;
+  margin-top: 12px;
+}
+
+.albums h5 {
+  margin-top: 10px;
+  align-self: flex-start;
+  font-size: 15px;
+  width: 168px;
+  height: 22.67px;
+  font-weight: semi-bold;
+  white-space: nowrap;
+  /*if overflowing remaining text will not move to next line*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*adds an ellipsis (...) to represent the hidden text.*/
+
+}
+
+.album {
+  overflow-x: scroll;
+  flex: 0 0 auto;
+  padding: 5px;
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  column-gap: 15px;
+  margin-left: 15px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+.albumscollection h3 {
+  margin-left: 15px;
+
+}
+
+.albums .album:first-child {
+  margin-left: 15px;
+}
+
+.album img {
+  width: 100℅;
+  height: 165px;
+}
+
+.card {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  color: white;
+  font-family: 'Poppins', Sans-serif;
+  font-weight: lighter;
+}
+
+card * {
+  margin: 10px;
+}
+
+.cardimg {
+  width: 80vw;
+  height: 250px;
+  position: absolute;
+  top: 80px;
+  border-radius: 8px;
+}
+
+.card h4 {
+  position: absolute;
+  top: 340px;
+}
+
+.cardclose {
+  width: 30px;
+  filter: invert(1);
+  position: absolute;
+  right: 10px;
+  top: 25px;
+}
+
+.audioplayer {
+  position: absolute;
+  top: 375px;
+  color: gray;
+
+}
+.card .controls{
+  width:80vw;
+  /*height:2vh;*/
+  position:absolute;
+  top:365px;
+  display:flex;
+  flex-direction:column;
+  /*gap:8px;*/
+}
+.mainctrl{
+/*background-color:aqua;*/
+  display:flex;
+  justify-content: center;
+align-items:center;
+  column-gap:16px;
+  position: relative;
+  width:100℅;
+  z-index:2;
+}
+.card .play{
+  filter:invert(1);
+  width:55px;
+  height:45px;
+}
+.card .pause{
+  filter:invert(1);
+  width:55px;
+  height:45px;
+}
+.card .pausehide{
+  display:none;
+}
+.card .playhide{
+  display:none;
+}
+
+.card .next{
+  width:40px;
+  filter:invert(1);
+}
+.card .prev{
+  width:40px;
+  filter:invert(1);
+  transform:rotate(180deg);
+}
+
+.controls .volume_controls{
+display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.controls .seekbar{
+  width:100℅;
+  height:4px;
+  background-color:white;
+  position: relative;
+  
+}
+.controls .seekbar .circle{
+  width:8px;
+  height:8px;
+  background-color:white;
+  border-radius:10px;
+  position: absolute;
+  top:-2px;
+  left:0%;
+  z-index:10;
+  transition:left 0.5s; 
+}
+
+@keyframes slide-left{
+  0%{
+    left:100vw;
+  }
+  100%{
+    left:0px;
+  }
+}
+
+
+header button:hover{
+  filter:opacity(0.5);
+}
+header img:hover{
+  
+  filter:invert(0.8);
+}
+
+/* Customised the volume range input by ChatGPT*/
+.volinput {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  background: #ddd;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity .15s ease-in-out;
+}
+
+.volinput:hover {
+  opacity: 1;
+}
+
+.volinput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #4CAF50;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.volinput::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: #4CAF50;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
