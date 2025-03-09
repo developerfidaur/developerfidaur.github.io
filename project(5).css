@@ -1,0 +1,331 @@
+body {
+  /* background-repeat: no-repeat;*/
+  background-size: cover;
+  background-position: 0px 0px;
+  font-family: 'Arial', sans-serif;
+ /*background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+/*  display: flex;
+  justify-content: center;
+  align-items:center;*/
+
+}
+
+h2 {
+  font-size: 40px;
+  margin-left: -30px;
+  font-weight: bold;
+  color: #08009e;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.head {
+  display: flex;
+  width: 180px;
+  height: 90px;
+  margin-left: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.none {
+  display: none;
+}
+
+header .line {
+  width: 90vw;
+  height: 2px;
+  background-color: #525252;
+  align-self: center;
+}
+
+.intro {
+  margin-top: 50px;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.no-visible {
+  display: none;
+}
+
+.intro button {
+  border: 1px solid #000c8f;
+  border-radius: 4px;
+  background-color:#08009e;
+  /* #007bff;*/
+  color: yellow;
+  width: 120px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  transition:background 0.3s;
+}
+.intro button:hover {
+    background: #0056b3;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 10px;
+  gap: 15px;
+  position: relative;
+}
+
+main .opt {
+  width: 85vw;
+  height: 40px;
+  border: 2px solid #000c8f;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  transition: all 0.4s ease-in;
+  background: #f1f3f5;
+}
+.opt:hover {
+  background: #dee2e6;
+}
+
+
+main h4 {
+  color: #070042;
+
+}
+
+#score {
+  font-weight: 300;
+  font-size: 18px;
+  color: black;
+  align-self: center;
+}
+
+#finalscore {
+  width: 150px;
+  font-size: 18px;
+  color: black;
+  align-self: center;
+}
+
+#timebox {
+  position: absolute;
+  top: 30px;
+  left: 210px;
+}
+
+#timebox #timer {
+  background-color: #69e3ff;
+  border: 1px solid #08009e;
+  width: 115px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+}
+
+#timebox #timeLeft {
+  background-color: #343a40;
+  width: 30px;
+  height: 25px;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+#timeLeft p {
+  position: relative;
+  top: -7px;
+}
+
+#scorebox {
+  background-color: #63ffef;
+
+  border: 1px solid #08009e;
+  width: 75px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  position: absolute;
+  left: 220px;
+  top: 75px;
+}
+
+#scoreAnimation {
+  position: absolute;
+  left: 160px;
+  font-size: 40px;
+  transition: all 1s ease;
+  opacity: 0;
+  color: deepskyblue;
+}
+
+.hide {
+  display: none;
+}
+
+.loader {
+  width: 100vw;
+  background-color: red;
+  height: 15px;
+  position: absolute;
+  top: 50vw;
+  left: 0px;
+}
+
+.loader img {
+  width: 40px;
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  transition: transform 8s ease;
+
+}
+
+#whiteLoad {
+  background-color: #000000;
+  width: 100vw;
+  height: 15px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#yellowLoad {
+  background-color: yellow;
+  width: 120vw;
+  height: 15px;
+  position: absolute;
+  top: 0px;
+  left: -115vw;
+  transition: transform 8s ease;
+
+}
+
+#rule {
+  background-color: #8adaff;
+  border: 1px solid #009aa8;
+  width: 290px;
+  height: 300px;
+  position: relative;
+  top: 35px;
+  left: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+#rule h4 {
+  height: 10px;
+  align-self: flex-start;
+  margin-top: 12px;
+}
+
+#rule h2 {
+  height: 16px;
+}
+
+#victory {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#victoryScore {
+  position: absolute;
+  top: 17px;
+  right: 5px;
+  /*color:yellow;*/
+  font-weight: bolder;
+  font-size: 24px;
+  /* Add some effects! */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  /* Subtle shadow */
+  font-family: 'Courier New', Courier, monospace;
+  /* Monospace font */
+  animation: glow 1s infinite alternate;
+  /* Add a glow */
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px yellow;
+  }
+
+  to {
+    text-shadow: 0 0 20px yellow;
+  }
+}
+
+
+#victoryScore {
+  color: #ffd700;
+  text-shadow: 2px 2px 5px rgba(204, 153, 0, 0.9);
+}
+
+#restart {
+ /* background-color: rgb(204, 153, 0);
+  color: red;*/
+  /*border: 1px solid #0600a8;*/
+  background: linear-gradient(135deg, #FF5733, #C70039); /* Adjust to match your theme's background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: none;
+  width: 100px;
+  height: 40px;
+  
+  border-radius: 6px;
+  font-weight: bolder;
+  font-size: 17px;
+  position: absolute;
+  z-index: 10;
+  top: 80px;
+  right: 5px;
+  animation: button-pop 0.5s ease-out;
+
+}
+#restart:hover{
+  background: linear-gradient(135deg, #C70039, #FF5733); /* Adjust to match your theme's hover color */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  
+  transform: scale(1.05);
+}
+#restart:active{
+  background: linear-gradient(135deg, #900C3F, #581845); /* Adjust to match your theme's active color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+}
+@keyframes button-pop {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
