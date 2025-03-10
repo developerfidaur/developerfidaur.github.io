@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Blog-Website</title>
+  
+  
+
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+  #contact {
+    text-decoration: underline;
+    text-decoration-color: var(--main-bg-color);
+  }
+</style>
+</head>
+
+<body>
+  <header>
+    <img src='/IMG_20241012_112915.jpg'>
+    <nav>
+      <ul>
+        <li><a href='index.html'>Home</a></li>
+        <li><a href='about.html'>About</a></li>
+        <li><a href='contact.html'id ='contact'>Contact</a></li>
+      </ul>
+    </nav>
+    <div id='search'>
+      <input placeholder="Article Search">
+     <a href='search.html'>
+       <button>Search</button>
+     </a>
+    </div>
+    <div id='line'></div>
+  </header>
+ <main>
+   <div>
+  <div class='contact-section'>
+    
+  <h1>CONTACT US</h1>
+  <form>
+    <div class='form-box'>
+      <input type='text' placeholder='Enter your name' required>
+    </div>
+    <div class='form-box'>
+  <input type='number' placeholder='Enter your contact number' required>
+</div>
+<div class='form-box'>
+  <input type='email' placeholder='Enter your email-id' required>
+</div>
+<div class='form-box'>
+  <input type='date' placeholder='date of birth' required>
+</div>
+<textarea name="text-area" id="text-area" cols="30" rows="10" placeholder='Tell us about yourself' required></textarea>
+<button>SUBMIT</button>
+  </form>
+  </div>
+  
+  </div>
+ </main>
+ <footer>
+   <span>Copyright © @PokéBlog.com</span>
+ </footer>
+ 
+<script>
+  
+document.querySelector('#search').querySelector('button').addEventListener("click",()=>{
+  search=document.querySelector('#search').querySelector('input').value;
+  
+  console.log('search',search)
+  localStorage.setItem('input',search)
+})
+
+ </script>
+</body>
+</html>

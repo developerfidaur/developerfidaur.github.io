@@ -1,0 +1,58 @@
+.contact-section:after{
+  width:98vw;
+height:80vh;
+  border-radius:10px;
+  content:"h";
+  background-position: 0px center;
+  background-image:url('/image_search_1731758988483.jpg');
+  position:absolute;
+  left:1vw;
+  top:0px;
+  background-position:0px center;
+  opacity:0.3;
+}
+.contact-section{
+  border-radius:10px;
+  width:98vw;
+  height:80vh;
+  overflow:hidden;
+  position: relative;
+  padding:5px 10px 10px 10px;
+  box-sizing: border-box;
+}
+h1{
+  position:absolute;
+  top:20px;
+  z-index:10;
+  margin: 10px;
+}
+form{
+  z-index:10;
+  position:relative;
+  top:60px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+.form-box input,textarea{
+  padding:6px;
+  width:80vw;
+  margin:8px;
+  border:2px solid var(--main-bg-color);
+  border-radius:5px;
+}
+form button{
+  border:none;
+  border-radius:8px;
+  padding:6px;
+  width:40vw;
+  height:50px;
+  border:2px solid black;
+  margin:8px;
+}
+form button:hover{
+  background-color: var(--main-bg-color);
+  color:white;
+}
+/* why the bg image isn't showing */

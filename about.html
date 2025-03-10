@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  #about{
+    text-decoration:underline;
+   text-decoration-color:var(--main-bg-color);
+  }
+  main{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+  }
+ main #Main{
+   background-color:rgba(248,239,239,0.5);
+   width:96vw;
+   height:860px;
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   position:relative;
+   border-radius: 12px;
+   padding-top:22px;
+ }
+ main #Main img{
+   width:250px;
+   position:absolute;
+   bottom:8px;
+   margin-top:2px;
+ }
+ main #Main h1{
+   font-weight:bolder;
+   text-align: center;
+   margin-top:12px;
+ 
+ }
+ #Main h3{
+   font-weight:lighter;
+   padding:6px;
+   width:80%;
+ }
+ #Main #author{
+   margin-top:-10px;
+   width:36%;
+   position:relative;
+   left:100px;
+   margin-bottom:10px;
+ }
+</style>
+<body>
+
+ <header>
+   <img src='/IMG_20241012_112915.jpg'>
+   <nav>
+     <ul>
+       <li><a href='index.html' id='home'>Home</a></li>
+       <li><a href='about.html' id='about'>About</a></li>
+       <li><a href='contact.html' id='contact'>Contact</a></li>
+     </ul>
+   </nav>
+   <div id='search'>
+     <input placeholder="Article Search" required>
+     <a href='search.html'>
+       <button>Search</button>
+     </a>
+   </div>
+   <div id='line'></div>
+ </header>
+<main>
+  <div id='Main'>
+    <h1>Your Gateway to the Pokémon Universe</h1>
+    <h3>Welcome to PokéBlog, the ultimate destination for Pokémon enthusiasts! Our mission is to create a vibrant community for fans of all ages, where the love for Pokémon pops up through engaging articles,insightful guides, and fun discussions. Whether you're a seasoned trainer or just starting your journey, our blog is packed with everything you need to know about the world of Pokémon—from strategy tips and character breakdowns to the latest news and fan theories. At PokéBlog, we celebrate the magic of this iconic franchise and invite you to join us in exploring the endless adventures of Pokémon.</h3>
+    <h3 id='author'><b>- PokéBlog</b></h3>
+    <img src='/image_search_1732634669624-removebg-preview.png'>
+  </div>
+</main>
+  <footer>
+   <span>Copyright © @PokéBlog.com</span>
+ </footer>
+ <script>
+  
+document.querySelector('#search').querySelector('button').addEventListener("click",()=>{
+  search=document.querySelector('#search').querySelector('input').value;
+  
+  console.log('search',search)
+  localStorage.setItem('input',search)
+})
+
+ </script>
+</body>
+
+</html>
