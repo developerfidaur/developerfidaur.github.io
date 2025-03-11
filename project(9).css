@@ -110,8 +110,8 @@ header button:hover{
 }
 .content-below{
   position:absolute;
-  bottom:8px;
-  margin-top:20px;
+  bottom:-2px;
+  margin-top:30px;
 }
 .content-top{
   position:absolute;
@@ -201,4 +201,22 @@ footer{
   text-decoration: none;
   margin-top:4px;
   margin-bottom:3px;
+}
+@media (min-width: 769px) {
+  body {
+    
+  }
+  header img {
+  width: 350px;
+  margin: 30px;
+  }
+  header li{
+    font-size:25px;
+  }
+  #left{
+    display:flex;
+  }
+  .nav{
+    align-self: flex-end;
+  }
 }
