@@ -3,6 +3,6 @@ document.querySelector('#hamburger').addEventListener('click',()=>{
 })
  
    function onSubmit(token) {
-     document.getElementById("demo-form").submit();
+     document.querySelector("form").submit();
    }
  
